@@ -1,23 +1,32 @@
-name: MOTD
+name: ServerMOTD
 version: 0.1.0
-api: 1.0.0
-main: Blubberboy333\MOTD\Main
-description: "Allows the server owner to set a message of the day that players can read"
-
+api: 1.1.0
+main: Blubberboy333\ServerMOTD\ServerMOTD
 commands:
   motd:
-    usage: "/motd < set | read>"
-    description: "Allows the player to set or read the MOTD"
-    permission: motd.command
-
+    usage: "/motd"
+    description: "Gives a list of all possible commands"
+    permission: motd.command.motd
+  motd set:
+    usage: "/motd set"
+    description: "Allows the player to set the MOTD"
+    permission: motd.command.set
+  motd read:
+    usage: "/motd read"
+    description: "Allows the player to read the MOTD"
+    permission: motd.command.read
+  
 permissions:
   motd.command:
-    description: "Allows the player to use all of the MOTD functions
+    description: "Allows the player to use all of the MOTD functions"
     default: op
     children:
       motd.command.set:
-        description: "Allows the player to set the MOTD"
-        default: op
+         description: "Allows the player to set the MOTD"
+         default: op
       motd.command.read:
         description: "Allows the player to read the MOTD"
+        default: true
+      motd.command.motd:
+        description: "Allows the player to see a list of possible commands"
         default: true
