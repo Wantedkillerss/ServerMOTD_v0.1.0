@@ -2,7 +2,9 @@ name: ServerMOTD
 version: 0.1.0
 api: 1.1.0
 main: Blubberboy333\ServerMOTD\ServerMOTD
+author: Blubberboy333
 commands:
+
   motd:
     usage: "/motd"
     description: "Gives a list of all possible commands"
