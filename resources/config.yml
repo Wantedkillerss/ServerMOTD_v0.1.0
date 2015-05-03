@@ -1,0 +1,18 @@
+## Default config file for ServerMOTD
+# ____  _       _     _               _                 ____ ____ ____  
+#|  _ \| |     | |   | |             | |               | __ \___ \___ \ 
+#| |_) | |_   _| |__ | |__   ___ _ __| |__   ___  _   _  __) |__) |__) |
+#|  _ <| | | | | '_ \| '_ \ / _ \ '__| '_ \ / _ \| | | ||__ <|__ <|__ < 
+#| |_) | | |_| | |_) | |_) |  __/ |  | |_) | (_) | |_| |___) |__) |__) |
+#|____/|_|\__,_|_.__/|_.__/ \___|_|  |_.__/ \___/ \__, |____/____/____/ 
+#                                                  __/ |                
+#                                                 |___/                 
+
+## Broadcast message when the MOTD is changed?
+Broadcast: true
+
+## Message sent when the MOTD is changed (if broadcasting is enabled)
+BroadcastMessage: The MOTD has been changed! Use /motd read to read it!
+
+## Will a player see the MOTD when they respawn or join the game?
+RespawnMOTD: true
