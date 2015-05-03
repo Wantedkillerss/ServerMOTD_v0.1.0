@@ -10,13 +10,14 @@
  *                                                |___/                 
  */
 
-namespace Blubberboy333\ServerMOTD\Main;
+namespace Blubberboy333\ServerMOTD\ServerMOTD;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\command\CommandSender;
-use pocektmine\command\Command;
+use pocketmine\command\Command;
+use pocketmine\utils\TextFormat;
 
 class ServerMOTD extends PluginBase implements Listener {
 	
@@ -38,6 +39,7 @@ class ServerMOTD extends PluginBase implements Listener {
 	
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
 		switch($command->getName()){
+			
 			case "set":
 				if($sender instanceof Player && $sender->hasPermission("motd.command.set")){
 					$newMOTD = $this->getPlayerMessage();
