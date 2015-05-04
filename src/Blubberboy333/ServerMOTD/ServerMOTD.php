@@ -23,7 +23,8 @@ use pocketmine\command\Command;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 
-class ServerMOTD extends PluginBase implements Listener {
+
+class ServerMOTd extends PluginBase implements Listener {
 	
 
 	
@@ -48,7 +49,7 @@ class ServerMOTD extends PluginBase implements Listener {
 	//onCommand(CommandSender $sender, Command $command, $label, array $args)
 	
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-		switch($command->getName()){
+			switch(strtolower(array_shift($args))){
 			case "motd":
 			
 				if($sender instanceof Player && $sender->hasPermission("motd.command.motd")){
@@ -59,8 +60,6 @@ class ServerMOTD extends PluginBase implements Listener {
 					$sender->sendMessage("You don't have permission to do that!");
 			return false;
 				}
-				
-			switch(strtolower(array_shift($args))){
 				case "set":
 					if($sender instanceof Player && $sender->hasPermission("motd.command.set")){
 						$broadcast = $this->getConfig()->get('Broadcast');
@@ -97,7 +96,6 @@ class ServerMOTD extends PluginBase implements Listener {
 				break;
 				}
 			}
-		}
 	public function onEntityRespawnEvent(EntityRespawnEvent $event){
 		$respawnMOTD = $this->getConfig()->get('RespawnMOTD');
 		if($respawnMOTD == true){
@@ -108,7 +106,7 @@ class ServerMOTD extends PluginBase implements Listener {
 				$entity->sendMessage("You don't have permission to view the MOTD!");
 		}
 		}else{
-			//If I leave this empty will it run nothing, or crash
+			//If I leave this empty will it run nothing, or crash?
 		}
 	}
 }
