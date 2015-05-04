@@ -24,7 +24,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 
 
-class ServerMOTd extends PluginBase implements Listener {
+class ServerMOTD extends PluginBase implements Listener {
 	
 
 	
