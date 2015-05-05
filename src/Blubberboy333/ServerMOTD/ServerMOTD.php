@@ -106,7 +106,7 @@ class ServerMOTD extends PluginBase implements Listener {
 				$entity->sendMessage("You don't have permission to view the MOTD!");
 		}
 		}else{
-			//If I leave this empty will it run nothing, or crash?
+			//If I leave this empty will it run nothing, or will the server crash?
 		}
 	}
 }
