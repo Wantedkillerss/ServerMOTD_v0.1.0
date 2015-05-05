@@ -1,10 +1,11 @@
 name: ServerMOTD
 version: 0.1.0
-api: 1.1.0
-main: Blubberboy333\ServerMOTD\ServerMOTD
+api: [1.10.0]
 author: Blubberboy333
-commands:
+description: Allows the players to read a message of the day, which is set by the owner, or an admin
+main: ServerMOTD\Main
 
+commands:
   motd:
     usage: "/motd"
     description: "Gives a list of all possible commands"
