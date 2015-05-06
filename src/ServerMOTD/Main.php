@@ -10,7 +10,7 @@
  *                                                |___/                 
  */
 
-namespace ServerMOTD;
+namespace blubberboy\ServerMOTD;
 
 use pocketmine\plugin\PluginBase;
 
