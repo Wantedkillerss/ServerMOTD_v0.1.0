@@ -63,7 +63,7 @@ class ServerMOTD extends PluginBase implements Listener {
 				case "set":
 					if($sender instanceof Player && $sender->hasPermission("motd.command.set")){
 						$broadcast = $this->getConfig()->get('Broadcast');
-						$newMOTD = $this->getPlayerMessage();
+						$newMOTD = str_replace("&", "§", $this->getPlayerMessage());
 						$motd[0] = $newMOTD;
 						if($broadcast != true){
 							$sender->sendMessage("You have successfully set the MOTD.");
